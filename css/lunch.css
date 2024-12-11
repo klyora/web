@@ -1,0 +1,156 @@
+h2 {
+  padding-left: 2%;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 35px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.dish-card:hover {
+  border: 2px solid tomato;
+}
+
+.dish-card img {
+  width: 100%;
+  border-radius: 35px;
+}
+
+.dish-card p {
+  margin: 10px 0;
+}
+
+.dish-card .dish-price {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #f1eee9;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: tomato;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#order-summary p {
+  margin: 10px 0;
+}
+
+#order-summary p:first-child {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex: 1 1 100%;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.order-section,
+fieldset {
+  flex: 1;
+  margin: 10px;
+}
+
+.filters {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.filter-button {
+  padding: 10px 15px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button.active {
+  background-color: tomato;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button:hover {
+  background-color: tomato;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#name,
+#email,
+#phone,
+#address {
+  width: 80%;
+}
+
+@media (min-width: 800px) {
+  .dish-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+  .dish-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dish-grid {
+    grid-template-columns: 1fr;
+  }
+}
